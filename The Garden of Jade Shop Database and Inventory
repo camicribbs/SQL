@@ -1,0 +1,34 @@
+--create a store database for The Garden of Jade's shop
+
+CREATE TABLE The_Garden_of_Jade (id INTEGER PRIMARY KEY, name TEXT, quantity INTEGER, price INTEGER);
+
+INSERT INTO The_Garden_of_Jade 
+VALUES 
+(1,"Body Butter", 15,11.11),
+(2,"Essential Oils Kit",10,22.22),
+(3, "Wick Candles", 30, 7.77),
+(4, "Crackling Candles", 15, 11.11),
+(5, "Shower Steamers", 20, 4.44),
+(6, "Bath Bombs", 20, 4.44),
+(7, "Reflexology Kit", 10, 22.22),
+(8, "Gua Sha Jade Roller Set", 10, 33.33),
+(9, "Reflection Journal", 12, 8.88),
+(10, "Hypnotherapy Package",100, 11.11), (11, "Yoga Mat", 15, 22.22),
+(12, "Daily Affirmation Cards", 10, 8.88),  (13, "Intuition Cards", 10, 8.88),
+(14, "Meditation Balls", 10, 7.77),
+(15, "Sound Healing Set", 10, 44.44);
+
+--display database ordered by price
+SELECT * FROM The_Garden_of_Jade
+WHERE price
+ORDER BY price asc;
+
+--How many items in total are in the store's inventory?
+SELECT SUM(quantity)
+FROM The_garden_of_Jade;
+
+--What is the average retail price of the items in the store?
+SELECT AVG(price) "average price of each item in the store"
+From The_Garden_of_Jade
+
+
